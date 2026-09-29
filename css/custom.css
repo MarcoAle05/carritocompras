@@ -1,0 +1,222 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #f5f3f3
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+header {
+    padding: 20px 0 0 0;
+    background: white;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/fes_logo.jpg);
+    height: 350px;
+    background-size: cover;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+
+.barra {
+    padding: 20px 0;
+    background: #741d51; /* Old browsers */
+    background: -moz-linear-gradient(left, #741d51 0%, #e44e52 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #741d51 0%,#e44e52 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #741d51 0%,#e44e52 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom:0;
+    }
+}
+.icono1 {
+    background-image: url(../img/icono1.png);
+}
+.icono2 {
+    background-image: url(../img/icono2.png);
+}
+.icono3 {
+    background-image: url(../img/icono3.png);
+}
+
+#lista-cursos .row {
+    margin-bottom:20px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+.footer {
+    margin-top: 40px;
+    border-top:1px solid #aaa;;
+    padding-top: 40px;   
+}
+.footer .menu a{
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+}
+
+
+/* ---- Conferencias / carrito ---- */
+#hero { position: relative; }
+.ciclo-banner {
+    position: absolute; left: 0; right: 0; bottom: 0;
+    padding: 20px 0;
+    background: linear-gradient(to top, rgba(10,20,60,.9), rgba(10,20,60,0));
+    color: white;
+}
+.ciclo-banner h2 { margin: 0; font-size: 3.2rem; color: white; }
+.ciclo-banner p { margin: 0; font-size: 1.8rem; }
+.total-header { font-weight: 700; margin-left: 8px; }
+.menu-carrito { display: flex; align-items: center; justify-content: flex-end; height: 100%; }
+.submenu { padding: 10px 0; cursor: pointer; }
+.submenu #carrito { min-height: 0; min-width: 340px; box-shadow: 0 6px 20px rgba(0,0,0,.25); text-align: left; }
+#lista-carrito { width: 100%; font-size: 1.3rem; }
+#lista-carrito th, #lista-carrito td { padding: 6px 4px; }
+.total-carrito { font-size: 1.8rem; font-weight: 700; text-align: right; margin: 10px 0; }
+.acciones-carrito { display: flex; gap: 10px; }
+.acciones-carrito .button { flex: 1; padding: 0 10px; margin: 0; }
+.grid-conferencias { display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); }
+.grid-conferencias .card img { width: 100%; height: 165px; object-fit: cover; }
+.info-card .semana { color: #741d51; font-weight: 700; font-size: 1.2rem; text-transform: uppercase; }
+.info-card .dato { margin: 2px 0; font-size: 1.4rem; }
+.info-card .costo { font-size: 2.2rem; font-weight: 700; margin: 10px 0 0; }
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.6); display: none; align-items: center; justify-content: center; z-index: 10; padding: 15px; }
+.modal.abierto { display: flex; }
+.modal-caja { background: white; border-radius: 10px; padding: 25px; max-width: 700px; width: 100%; max-height: 95vh; overflow: auto; }
+.tarjetas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 15px 0; }
+.tarjetas label { cursor: pointer; border: 3px solid transparent; border-radius: 14px; padding: 4px; display: block; text-align: center; font-size: 1.3rem; }
+.tarjetas input { display: none; }
+.tarjetas img { width: 100%; display: block; border-radius: 10px; }
+.tarjetas input:checked + img { outline: 4px solid #741d51; outline-offset: 2px; }
+.tarjetas label:hover { border-color: #e1e1e1; }
+.error-pago { color: crimson; min-height: 22px; font-weight: 700; }
+.confirmacion { text-align: center; }
+.confirmacion h3 { color: #1e8e3e; }
+@media (max-width: 549px) { .tarjetas { grid-template-columns: 1fr; } }
+footer{background:white;text-align:center;padding-bottom:20px}

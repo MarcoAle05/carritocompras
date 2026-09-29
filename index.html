@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletos · Ciclo de Conferencias FES Aragón</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/skeleton.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+    <header id="header" class="header">
+        <div class="container">
+            <div class="row">
+                <div class="four columns">
+                    <h1>Conferencias FES Aragón</h1>
+                </div>
+                <div class="two columns u-pull-right">
+                    <ul>
+                        <li class="submenu">
+                            <div class="menu-carrito">
+                                <img src="img/cart.png" alt="Carrito">
+                                <span class="total-header">Total: <span id="total-header">$0.00</span></span>
+                            </div>
+                            <div id="carrito">
+                                <table id="lista-carrito" class="u-full-width">
+                                    <thead>
+                                        <tr><th>Conferencia</th><th>Cant.</th><th>Precio</th><th></th></tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                                <p id="vacio" class="vacio">El carrito está vacío</p>
+                                <p class="total-carrito">Total: <span id="total-carrito">$0.00</span></p>
+                                <div class="acciones-carrito">
+                                    <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar carrito</a>
+                                    <a href="#" id="pagar" class="button button-primary u-full-width">Pagar</a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="hero">
+        <div class="ciclo-banner">
+            <div class="container">
+                <h2>Ciclo de Conferencias 2026</h2>
+                <p>Semana de realización: del 21 al 25 de septiembre de 2026 · FES Aragón, UNAM</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="lista-cursos" class="container">
+        <h2 id="encabezado">Conferencias disponibles</h2>
+        <div id="conferencias" class="grid-conferencias"></div>
+    </div>
+
+    <div id="modal-pago" class="modal" role="dialog" aria-modal="true" aria-labelledby="titulo-pago">
+        <div class="modal-caja">
+            <div id="paso-pago">
+                <h3 id="titulo-pago">Pagar boletos</h3>
+                <p>Total a pagar: <strong id="total-pago">$0.00</strong></p>
+                <p>Selecciona una tarjeta:</p>
+                <div class="tarjetas">
+                    <label><input type="radio" name="tarjeta" value="Visa"><img src="img/tarjeta-visa.svg" alt="Visa"></label>
+                    <label><input type="radio" name="tarjeta" value="Mastercard"><img src="img/tarjeta-mastercard.svg" alt="Mastercard"></label>
+                    <label><input type="radio" name="tarjeta" value="American Express"><img src="img/tarjeta-amex.svg" alt="American Express"></label>
+                </div>
+                <p class="error-pago" id="error-pago"></p>
+                <button id="confirmar-pago" class="button-primary">Pagar</button>
+                <button id="cancelar-pago">Cancelar</button>
+            </div>
+            <div id="paso-confirmacion" class="confirmacion" hidden>
+                <h3>¡Compra realizada con éxito!</h3>
+                <p id="msg-confirmacion"></p>
+                <button id="cerrar-confirmacion" class="button-primary">Aceptar</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Equipo 7</strong></p>
+            <p>Integrantes: Jared Uriel Chelius Medina, Silva Rodríguez Marco Alejandro</p>
+        </div>
+    </footer>
+
+    <script src="js/codigo.js"></script>
+</body>
+</html>
