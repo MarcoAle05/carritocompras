@@ -1,9 +1,9 @@
 const conferencias = [
-    { id: 1, carrera: 'IME', nombre: 'La Mecánica de Fluidos en los Procesos Químicos y Biológicos', ponente: 'Dr. David Israel Posadas Navarro', lugar: 'Auditorio CTA', dia: 'Martes 22 de septiembre', horario: '12:00 PM – 1:30 PM', costo: 100, img: 'img/curso1.jpg' },
-    { id: 2, carrera: 'ICO', nombre: 'CLUB LINDA & IMEF: Conoce nuestros proyectos', ponente: 'CLUB LIMA & IMEF', lugar: 'Auditorio A9', dia: 'Martes 22 de septiembre', horario: '1:30 PM – 2:30 PM', costo: 80, img: 'img/curso2.jpg' },
-    { id: 3, carrera: 'IEE', nombre: 'Origen y desarrollo del Sistema Eléctrico Nacional: de Porfirio Díaz a AMLO', ponente: 'Ing. Marco Antonio Calderón', lugar: 'Auditorio Vasconcelos', dia: 'Miércoles 23 de septiembre', horario: '11:00 AM – 1:00 PM', costo: 120, img: 'img/curso3.jpg' },
-    { id: 4, carrera: 'ICO', nombre: 'Alimentación, estudio y emociones', ponente: 'QFB. Paula Reyes', lugar: 'Auditorio DUACyD', dia: 'Miércoles 23 de septiembre', horario: '1:30 PM – 2:30 PM', costo: 80, img: 'img/curso4.jpg' },
-    { id: 5, carrera: 'ICI', nombre: 'Tiempo extra · Taller FIBRACONCRET (presencial)', ponente: 'Ing. David Alejandro Torres Montaño; Ing. Mayra Alejandra Trejo Duval; Ing. Javier Chavarria Torres', lugar: 'L-4', dia: 'Jueves 24 de septiembre', horario: '11:00 AM – 1:00 PM', costo: 150, img: 'img/curso5.jpg' }
+    { id: 1, carrera: 'IME', nombre: 'La Mecánica de Fluidos en los Procesos Químicos y Biológicos', ponente: 'Dr. David Israel Posadas Navarro', lugar: 'Auditorio CTA', dia: 'Martes 22 de septiembre', horario: '12:00 PM – 1:30 PM', costo: 100, img: 'img/mecanica-fluidos.png', pos: 'center 15%' },
+    { id: 2, carrera: 'ICO', nombre: 'CLUB LINDA & IMEF: Conoce nuestros proyectos', ponente: 'CLUB LIMA & IMEF', lugar: 'Auditorio A9', dia: 'Martes 22 de septiembre', horario: '1:30 PM – 2:30 PM', costo: 80, img: 'img/imef.jpeg' },
+    { id: 3, carrera: 'IEE', nombre: 'Origen y desarrollo del Sistema Eléctrico Nacional: de Porfirio Díaz a AMLO', ponente: 'Ing. Marco Antonio Calderón', lugar: 'Auditorio Vasconcelos', dia: 'Miércoles 23 de septiembre', horario: '11:00 AM – 1:00 PM', costo: 120, img: 'img/sistema-electrico.jpeg' },
+    { id: 4, carrera: 'ICO', nombre: 'Alimentación, estudio y emociones', ponente: 'QFB. Paula Reyes', lugar: 'Auditorio DUACyD', dia: 'Miércoles 23 de septiembre', horario: '1:30 PM – 2:30 PM', costo: 80, img: 'img/alimentacion.jpg' },
+    { id: 5, carrera: 'ICI', nombre: 'Tiempo extra · Taller FIBRACONCRET (presencial)', ponente: 'Ing. David Alejandro Torres Montaño; Ing. Mayra Alejandra Trejo Duval; Ing. Javier Chavarria Torres', lugar: 'L-4', dia: 'Jueves 24 de septiembre', horario: '11:00 AM – 1:00 PM', costo: 150, img: 'img/fibraconcret.webp' }
 ];
 
 const $ = id => document.getElementById(id);
@@ -17,7 +17,7 @@ const total = () => carrito.reduce((t, i) => t + conferencias.find(c => c.id ===
 function pintarConferencias() {
     $('conferencias').innerHTML = conferencias.map(c => `
         <div class="card">
-            <img src="${c.img}" alt="${esc(c.nombre)}">
+            <img src="${c.img}" alt="${esc(c.nombre)}" style="object-position: ${c.pos || 'center'}">
             <div class="info-card">
                 <p class="semana">${c.carrera} · ${c.dia}</p>
                 <h4>${esc(c.nombre)}</h4>
